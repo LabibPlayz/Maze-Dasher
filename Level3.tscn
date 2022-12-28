@@ -1,0 +1,349 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/RedKill.gd" type="Script" id=2]
+[ext_resource path="res://assets/player_icon.png.png" type="Texture" id=3]
+[ext_resource path="res://assets/red.png" type="Texture" id=4]
+[ext_resource path="res://Finish.tscn" type="PackedScene" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 640, 48 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 516.5, 9 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 34.5, 34.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 73.5, 13 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 96, 13 )
+
+[sub_resource type="OccluderPolygon2D" id=10]
+polygon = PoolVector2Array( 0, 624, 209, 624, 209, 561, 231, 561, 231, 624, 441, 624, 441, 561, 463, 561, 463, 624, 673, 624, 673, 561, 695, 561, 695, 624, 905, 624, 905, 561, 927, 561, 927, 624, 1280, 624, 1280, 720, 0, 720 )
+
+[sub_resource type="OccluderPolygon2D" id=11]
+polygon = PoolVector2Array( 0, 426, 330, 426, 330, 489, 352, 489, 352, 426, 562, 426, 562, 489, 584, 489, 584, 426, 786, 426, 786, 489, 808, 489, 808, 426, 1010, 426, 1010, 490, 1032, 490, 1032, 399, 0, 399 )
+
+[sub_resource type="OccluderPolygon2D" id=12]
+polygon = PoolVector2Array( 1175.5, 469.5, 1244.5, 469.5, 1244.5, 538.5, 1175.5, 538.5 )
+
+[sub_resource type="OccluderPolygon2D" id=13]
+polygon = PoolVector2Array( 1175.5, 469.5, 1244.5, 469.5, 1244.5, 538.5, 1175.5, 538.5 )
+
+[sub_resource type="OccluderPolygon2D" id=14]
+polygon = PoolVector2Array( 1175.5, 460.5, 1244.5, 460.5, 1244.5, 538.5, 1175.5, 538.5 )
+
+[sub_resource type="OccluderPolygon2D" id=15]
+polygon = PoolVector2Array( 906, 213, 1053, 213, 1053, 239, 906, 239 )
+
+[sub_resource type="OccluderPolygon2D" id=16]
+polygon = PoolVector2Array( 602, 213, 794, 213, 794, 239, 602, 239 )
+
+[sub_resource type="OccluderPolygon2D" id=17]
+polygon = PoolVector2Array( 602, 204, 794, 204, 794, 239, 602, 239 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 11, 32.5 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 516, 4.5 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 34.5, 4.5 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 96, 4.5 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0, 0.0235294, 0.266667, 1 )
+
+[node name="Player3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 57, 553 )
+
+[node name="WALLS" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="WALLS"]
+position = Vector2( 640, 672 )
+scale = Vector2( 80, 6 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="WALLS"]
+position = Vector2( 1211, 521 )
+scale = Vector2( 4.3125, 4.3125 )
+texture = ExtResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="WALLS"]
+position = Vector2( 1211, 377 )
+scale = Vector2( 4.3125, 4.3125 )
+texture = ExtResource( 3 )
+
+[node name="Sprite4" type="Sprite" parent="WALLS"]
+position = Vector2( 1211, 201 )
+scale = Vector2( 4.3125, 4.3125 )
+texture = ExtResource( 3 )
+
+[node name="Sprite5" type="Sprite" parent="WALLS"]
+position = Vector2( 96, 298 )
+scale = Vector2( 12, 1.625 )
+texture = ExtResource( 3 )
+
+[node name="Sprite6" type="Sprite" parent="WALLS"]
+position = Vector2( 386, 298 )
+scale = Vector2( 12, 1.625 )
+texture = ExtResource( 3 )
+
+[node name="Sprite7" type="Sprite" parent="WALLS"]
+position = Vector2( 698, 298 )
+scale = Vector2( 12, 1.625 )
+texture = ExtResource( 3 )
+
+[node name="Sprite8" type="Sprite" parent="WALLS"]
+position = Vector2( 979.5, 298 )
+scale = Vector2( 9.18749, 1.625 )
+texture = ExtResource( 3 )
+
+[node name="Sprite9" type="Sprite" parent="WALLS"]
+position = Vector2( 240, 194 )
+scale = Vector2( 12, 1.625 )
+texture = ExtResource( 3 )
+
+[node name="Sprite10" type="Sprite" parent="WALLS"]
+position = Vector2( 546, 194 )
+scale = Vector2( 12, 1.625 )
+texture = ExtResource( 3 )
+
+[node name="Sprite11" type="Sprite" parent="WALLS"]
+position = Vector2( 850, 194 )
+scale = Vector2( 12, 1.625 )
+texture = ExtResource( 3 )
+
+[node name="Sprite12" type="Sprite" parent="WALLS"]
+position = Vector2( 513.998, 416.75 )
+scale = Vector2( 64.7497, 1.099 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WALLS"]
+position = Vector2( 640, 672 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="WALLS"]
+position = Vector2( 515.5, 417 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="WALLS"]
+position = Vector2( 1211, 201 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="WALLS"]
+position = Vector2( 1211, 521 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="WALLS"]
+position = Vector2( 1211, 377 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="WALLS"]
+position = Vector2( 979.5, 298 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="WALLS"]
+position = Vector2( 698, 298 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="WALLS"]
+position = Vector2( 386, 298 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="WALLS"]
+position = Vector2( 96.0001, 298 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="WALLS"]
+position = Vector2( 240, 194 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="WALLS"]
+position = Vector2( 546, 194 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="WALLS"]
+position = Vector2( 850, 194 )
+shape = SubResource( 5 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="WALLS"]
+occluder = SubResource( 10 )
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="WALLS"]
+occluder = SubResource( 11 )
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="WALLS"]
+position = Vector2( 1, 17 )
+occluder = SubResource( 12 )
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="WALLS"]
+position = Vector2( 1, -126.9 )
+occluder = SubResource( 13 )
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="WALLS"]
+position = Vector2( 1, -303 )
+occluder = SubResource( 14 )
+
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="WALLS"]
+position = Vector2( 0, 72 )
+occluder = SubResource( 15 )
+
+[node name="LightOccluder2D7" type="LightOccluder2D" parent="WALLS"]
+position = Vector2( 0, 72 )
+occluder = SubResource( 16 )
+
+[node name="LightOccluder2D8" type="LightOccluder2D" parent="WALLS"]
+position = Vector2( -312, 72 )
+occluder = SubResource( 16 )
+
+[node name="LightOccluder2D9" type="LightOccluder2D" parent="WALLS"]
+position = Vector2( -602, 72 )
+occluder = SubResource( 16 )
+
+[node name="LightOccluder2D10" type="LightOccluder2D" parent="WALLS"]
+position = Vector2( -458, -32 )
+occluder = SubResource( 17 )
+
+[node name="LightOccluder2D11" type="LightOccluder2D" parent="WALLS"]
+position = Vector2( -152, -32 )
+occluder = SubResource( 17 )
+
+[node name="LightOccluder2D12" type="LightOccluder2D" parent="WALLS"]
+position = Vector2( 152, -32 )
+occluder = SubResource( 17 )
+
+[node name="Obstacles" type="Area2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Obstacles"]
+position = Vector2( 220, 593 )
+scale = Vector2( 21.5, 63.5 )
+texture = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="Obstacles"]
+position = Vector2( 341, 457 )
+scale = Vector2( 21.5, 63.5 )
+texture = ExtResource( 4 )
+
+[node name="Sprite3" type="Sprite" parent="Obstacles"]
+position = Vector2( 452, 593 )
+scale = Vector2( 21.5, 63.5 )
+texture = ExtResource( 4 )
+
+[node name="Sprite4" type="Sprite" parent="Obstacles"]
+position = Vector2( 573, 457 )
+scale = Vector2( 21.5, 63.5 )
+texture = ExtResource( 4 )
+
+[node name="Sprite5" type="Sprite" parent="Obstacles"]
+position = Vector2( 684, 593 )
+scale = Vector2( 21.5, 63.5 )
+texture = ExtResource( 4 )
+
+[node name="Sprite6" type="Sprite" parent="Obstacles"]
+position = Vector2( 797, 457 )
+scale = Vector2( 21.5, 63.5 )
+texture = ExtResource( 4 )
+
+[node name="Sprite7" type="Sprite" parent="Obstacles"]
+position = Vector2( 916, 593 )
+scale = Vector2( 21.5, 63.5 )
+texture = ExtResource( 4 )
+
+[node name="Sprite8" type="Sprite" parent="Obstacles"]
+position = Vector2( 1021.25, 457.3 )
+scale = Vector2( 21.5, 63.5 )
+texture = ExtResource( 4 )
+
+[node name="Sprite9" type="Sprite" parent="Obstacles"]
+position = Vector2( 850, 176.5 )
+scale = Vector2( 192, 9 )
+texture = ExtResource( 4 )
+
+[node name="Sprite10" type="Sprite" parent="Obstacles"]
+position = Vector2( 546, 176.5 )
+scale = Vector2( 192, 9 )
+texture = ExtResource( 4 )
+
+[node name="Sprite11" type="Sprite" parent="Obstacles"]
+position = Vector2( 240, 176.5 )
+scale = Vector2( 192, 9 )
+texture = ExtResource( 4 )
+
+[node name="Sprite12" type="Sprite" parent="Obstacles"]
+position = Vector2( 1211, 162 )
+scale = Vector2( 69, 9 )
+texture = ExtResource( 4 )
+
+[node name="Sprite13" type="Sprite" parent="Obstacles"]
+position = Vector2( 515.5, 403.5 )
+scale = Vector2( 1033, 9 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2( 220, 593 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2( 341, 457 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2( 452, 593 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2( 573, 457 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2( 684, 593 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2( 797, 457 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2( 916, 593 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2( 1021, 457 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2( 516, 403.5 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2( 1211, 162 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2( 850, 176.5 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2( 546, 176.5 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2( 240, 176.5 )
+shape = SubResource( 9 )
+
+[node name="Finish" parent="." instance=ExtResource( 5 )]
+position = Vector2( 64, 189 )
+
+[connection signal="body_entered" from="Obstacles" to="Obstacles" method="_on_Obstacles_body_entered"]

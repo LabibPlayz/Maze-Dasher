@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/mainPlayer.gd" type="Script" id=1]
+[ext_resource path="res://assets/light.png" type="Texture" id=2]
+[ext_resource path="res://assets/player_icon.png.png" type="Texture" id=3]
+[ext_resource path="res://assets/wing.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/levelAdvance.wav" type="AudioStream" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20, 20 )
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1.52588e-05, 0.5 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.52588e-05, 0.5 )
+shape = SubResource( 1 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( -20, 21 )
+enabled = true
+cast_to = Vector2( 0, 2 )
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+position = Vector2( 20, 21 )
+enabled = true
+cast_to = Vector2( 0, 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 2 )
+texture_scale = 1.57
+energy = 1.73
+shadow_enabled = true
+shadow_filter_smooth = 64.0
+
+[node name="LevelAdvanceSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="JumpSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
